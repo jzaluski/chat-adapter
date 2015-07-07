@@ -14,7 +14,6 @@ module ChatAdapter
     OPTION_DEFAULTS = {
       nick: 'chatbot',
       channels: nil,
-      icon_emoji: '',
     }
 
     # Options passed to the instance, merged with defaults
@@ -50,7 +49,6 @@ module ChatAdapter
 
       data = {
         username: options[:nick],
-        icon_emoji: options[:icon_emoji],
         link_names: true,
         text: message,
         channel: '@'+user,
@@ -89,7 +87,6 @@ module ChatAdapter
       return "" if answer.nil?
       JSON.generate({
         username: options[:nick],
-        icon_emoji: options[:icon_emoji],
         link_names: true,
         text: answer
       })
