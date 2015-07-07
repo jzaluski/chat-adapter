@@ -14,7 +14,7 @@ module ChatAdapter
     OPTION_DEFAULTS = {
       nick: 'chatbot',
       channels: nil,
-      icon_emoji: ':ghost:',
+      icon_emoji: '',
     }
 
     # Options passed to the instance, merged with defaults
